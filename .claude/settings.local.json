@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p specs/1-cli-todo-app)",
+      "Bash(python -m unittest C:todovenvtodo_consoleteststest_todo.py -v)"
+    ]
+  }
+}
