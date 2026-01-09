@@ -159,7 +159,9 @@
       "Bash(git config core.autocrlf)",
       "Bash(od -c .gitignore)",
       "Bash(git config core.eol)",
-      "Bash(git config --global core.eol)"
+      "Bash(git config --global core.eol)",
+      "Bash(python -m uvicorn main:app --reload)",
+      "Bash(curl http://127.0.0.1:8000/health)"
     ]
   }
 }
