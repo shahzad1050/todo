@@ -161,7 +161,9 @@
       "Bash(git config core.eol)",
       "Bash(git config --global core.eol)",
       "Bash(python -m uvicorn main:app --reload)",
-      "Bash(curl http://127.0.0.1:8000/health)"
+      "Bash(curl http://127.0.0.1:8000/health)",
+      "Bash(timeout 5s tail -n 20 C:UsersshahzAppDataLocalTempclaudeC--todo-venvtasksba4ca2f.output)",
+      "Bash(timeout 10 tail -n 30 C:UsersshahzAppDataLocalTempclaudeC--todo-venvtasksb52b11f.output)"
     ]
   }
 }
