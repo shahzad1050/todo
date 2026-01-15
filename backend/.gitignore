@@ -1,1 +1,16 @@
 .vercel
+.env
+*.env
+.env.local
+.env.production
+*.db
+*.db-journal
+__pycache__/
+*.pyc
+.pytest_cache/
+.coverage
+htmlcov/
+.vscode/
+.idea/
+.DS_Store
+todo_app.db
