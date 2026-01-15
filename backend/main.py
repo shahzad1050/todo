@@ -103,4 +103,10 @@ def favicon():
         return Response(content=transparent_favicon, media_type="image/x-icon")
     except Exception as e:
         logger.error(f"Error serving favicon: {e}")
-        return {"error": "Favicon not available"}
+        # Return an empty transparent favicon as fallback
+        # Base64 encoded 16x16 transparent PNG
+        empty_favicon = base64.b64decode(
+            "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAALUlEQVR42mNkYPhf"
+            "zMDAwMCg8J+BgeE/AwMDQ8D////9GQQYGBgYGBgYGP4zAADDTg1BLsyudgAAAABJRU5ErkJggg=="
+        )
+        return Response(content=empty_favicon, media_type="image/x-icon")
