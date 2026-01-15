@@ -1,11 +1,6 @@
 {
   "version": 2,
-  "framework": "nextjs",
-  "rootDirectory": "frontend",
-  "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "https://backend-xi-nine-99.vercel.app/api/$1"
-    }
-  ]
+  "git": {
+    "deploymentEnabled": false
+  }
 }
