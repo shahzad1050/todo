@@ -5,10 +5,6 @@ from database import create_db_and_tables
 from api import tasks
 from auth import auth_router
 import os
-from dotenv import load_dotenv
-
-# Load environment variables
-load_dotenv()
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):

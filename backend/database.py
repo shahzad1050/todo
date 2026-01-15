@@ -1,13 +1,13 @@
 from sqlmodel import create_engine, Session, SQLModel
 from models import User, Task  # Import models to register them with SQLModel
 import os
-from dotenv import load_dotenv
-
-# Load environment variables
-load_dotenv()
 
 # Get database URL from environment
-DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://neondb_owner:npg_LDwYj29VvHhq@ep-winter-bread-a44joluf-pooler.us-east-1.aws.neon.tech/neondb?sslmode=require")
+# Don't load .env in serverless environments as it's not needed
+DATABASE_URL = os.getenv("DATABASE_URL")
+if not DATABASE_URL:
+    # Fallback for development only
+    DATABASE_URL = "sqlite:///./test.db"  # Use SQLite for local testing
 
 # For serverless environments, use connection parameters suitable for serverless
 try:
