@@ -5,9 +5,8 @@ import { NextRequest } from 'next/server';
 export async function GET(request: NextRequest, { params }: { params: { path: string[] } }) {
   try {
     const path = params.path.join('/');
-    const backendPath = `/api/${path}`;
-    const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:8000';
-    const backendEndpoint = `${BACKEND_URL}${backendPath}`;
+    const BACKEND_URL = process.env.BACKEND_URL || 'https://backend-xi-nine-99.vercel.app';
+    const backendEndpoint = `${BACKEND_URL}/api/${path}`;
 
     // Forward headers from the original request
     const headers: Record<string, string> = {};
@@ -44,9 +43,8 @@ export async function GET(request: NextRequest, { params }: { params: { path: st
 export async function POST(request: NextRequest, { params }: { params: { path: string[] } }) {
   try {
     const path = params.path.join('/');
-    const backendPath = `/api/${path}`;
-    const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:8000';
-    const backendEndpoint = `${BACKEND_URL}${backendPath}`;
+    const BACKEND_URL = process.env.BACKEND_URL || 'https://backend-xi-nine-99.vercel.app';
+    const backendEndpoint = `${BACKEND_URL}/api/${path}`;
 
     // Get request body
     const body = await request.text();
@@ -87,9 +85,8 @@ export async function POST(request: NextRequest, { params }: { params: { path: s
 export async function PUT(request: NextRequest, { params }: { params: { path: string[] } }) {
   try {
     const path = params.path.join('/');
-    const backendPath = `/api/${path}`;
-    const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:8000';
-    const backendEndpoint = `${BACKEND_URL}${backendPath}`;
+    const BACKEND_URL = process.env.BACKEND_URL || 'https://backend-xi-nine-99.vercel.app';
+    const backendEndpoint = `${BACKEND_URL}/api/${path}`;
 
     // Get request body
     const body = await request.text();
@@ -130,9 +127,8 @@ export async function PUT(request: NextRequest, { params }: { params: { path: st
 export async function PATCH(request: NextRequest, { params }: { params: { path: string[] } }) {
   try {
     const path = params.path.join('/');
-    const backendPath = `/api/${path}`;
-    const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:8000';
-    const backendEndpoint = `${BACKEND_URL}${backendPath}`;
+    const BACKEND_URL = process.env.BACKEND_URL || 'https://backend-xi-nine-99.vercel.app';
+    const backendEndpoint = `${BACKEND_URL}/api/${path}`;
 
     // Get request body
     const body = await request.text();
@@ -173,9 +169,8 @@ export async function PATCH(request: NextRequest, { params }: { params: { path: 
 export async function DELETE(request: NextRequest, { params }: { params: { path: string[] } }) {
   try {
     const path = params.path.join('/');
-    const backendPath = `/api/${path}`;
-    const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:8000';
-    const backendEndpoint = `${BACKEND_URL}${backendPath}`;
+    const BACKEND_URL = process.env.BACKEND_URL || 'https://backend-xi-nine-99.vercel.app';
+    const backendEndpoint = `${BACKEND_URL}/api/${path}`;
 
     // Forward headers from the original request
     const headers: Record<string, string> = {};
